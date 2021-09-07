@@ -1,0 +1,7 @@
+const express = require('express');
+npm init -y
+npm install express
+npm install --save-dev @babel/core @babel/node @babel/preset-env
+npx babel-node ./src/server.js
+npm install --save-dev nodemon
+    npx nodemon --exec npx babel-node ./src/server.js

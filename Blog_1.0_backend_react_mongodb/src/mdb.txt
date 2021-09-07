@@ -1,0 +1,22 @@
+show dbs
+use <name_dbs>
+use <new_dbs>
+db.articles.insertMany([{
+         name:'learn-react',
+         upvote:0,
+         comments: [],
+     },{
+         name:'learn-node',
+         upvote:0,
+         comments:[],
+     },{
+         name:'my-thoughts-on-resumes',
+         upvote:0,
+         comments:[],
+     }])
+db.articles.find({ name:'learn-react'})
+db.articles.findOne({name:'learn-react'})
+db.articles.updateOne({ name:'learn-react' },{ $set:{upvotes:1}})
+db.articles.updateOne({ name:'learn-react' },{ $inc:{upvotes:1}})
+db.aricles.updateOne({ name:'learn-react' },{ $push:{comments:{postedBy:'krish',text:'awesome rishi'}}})
+db.
